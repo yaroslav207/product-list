@@ -32,14 +32,13 @@ const loadMoreComments = createAsyncThunk(ActionType.LOAD_MORE_COMMENTS, async (
   };
 });
 
-const createComment = createAsyncThunk(ActionType.LOAD_MORE_COMMENTS, async (_, {getState}) => {
-  const {comment} = getState();
-  await commentService.addComment(comment);
-});
+const createComment = (commentPayload) => async () => {
+  await commentService.addComment(commentPayload);
+};
 
 export {
-  loadComments,
   createComment,
+  loadComments,
   loadMoreComments,
 };
 
