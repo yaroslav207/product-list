@@ -1,0 +1,23 @@
+.commentWrapper {
+  background-color: #ffffff;
+
+  .commentInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-style: italic;
+    color: #858585;
+    padding: 15px 30px;
+    border-bottom: 1px solid #efefef;
+  }
+
+  .commentText {
+    font-size: 18px;
+    min-height: 50px;
+    padding: 30px;
+
+    span {
+      word-wrap: break-word;
+    }
+  }
+}
