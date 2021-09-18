@@ -1,0 +1,39 @@
+.labelWrapper {
+  position: relative;
+  padding: 24px 0 0;
+  .label {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+  }
+
+  .input {
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 1s ease;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #9d9da7;
+    height: 40px;
+  }
+
+  .textarea {
+    height: 100%;
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .errorMessage {
+    font-size: 12px;
+    color: #ff4641;
+
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+  }
+}
