@@ -19,5 +19,8 @@ module.exports = {
   ],
   'rules': {
     'require-jsdoc': 0,
+    'no-trailing-spaces': [2, {'skipBlankLines': true}],
+    'operator-linebreak': [2, 'before'],
+    'max-len': ['error', {'code': 120}],
   },
 };
