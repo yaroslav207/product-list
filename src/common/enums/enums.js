@@ -1,4 +1,4 @@
 export * from './components/components';
-export * from './comments/comments';
-export * from './http/http';
+export * from './product/product';
+export * from './auth/auth';
 export * from './app/app';

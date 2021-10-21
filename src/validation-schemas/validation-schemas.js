@@ -1,1 +1,1 @@
-export * from './create-comment/create-comment.validation-schema';
+export * from './auth/auth.validation-schema';
