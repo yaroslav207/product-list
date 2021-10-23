@@ -4,7 +4,7 @@ import {ButtonTypes} from 'src/common/enums/enums';
 import {getAllowedClasses} from 'src/helper/helper';
 import style from './styles.module.scss';
 
-function Button({onClick, type, className, label}) {
+function Button({onClick, type, className, label, formAction}) {
   const allowedClasses = getAllowedClasses([
     style.button,
     className,
@@ -14,6 +14,7 @@ function Button({onClick, type, className, label}) {
       onClick={onClick}
       className={allowedClasses}
       type={type}
+      formAction={formAction}
     >
       {label}
     </button>
@@ -25,12 +26,14 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.oneOf(Object.values(ButtonTypes)),
   className: PropTypes.string,
+  formAction: PropTypes.func,
 };
 
 Button.defaultProps = {
   onClick: null,
   type: ButtonTypes.BUTTON,
   className: null,
+  formAction: null,
 };
 
 export default Button;
