@@ -1,8 +1,9 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
+import {Redirect} from 'react-router-dom';
 import {Input, Button} from 'src/components/common/common';
 import {getResolver} from 'src/helper/helper';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {authAction} from 'src/store/actions';
 import {
   auth as authSchema,
@@ -11,6 +12,7 @@ import {
   ButtonTypes,
   AuthPayloadKey,
   InputTypes,
+  AppRoute,
 } from 'src/common/enums/enums';
 import styles from './styles.module.scss';
 
@@ -26,6 +28,12 @@ function Auth() {
 
   const dispatch = useDispatch();
 
+  const {user} = useSelector(({auth}) => ({
+    user: auth.user,
+  }));
+
+  const hasUser = Boolean(user);
+
   const handleRegister = (authPayload) => {
     dispatch(authAction.register({authPayload}));
     reset();
@@ -35,6 +43,10 @@ function Auth() {
     dispatch(authAction.login({authPayload}));
     reset();
   };
+
+  if (hasUser) {
+    return <Redirect to={AppRoute.ROOT} />;
+  }
 
   return (
     <div className={styles.authForm}>
