@@ -1,10 +1,15 @@
-import {Http} from './http/http.service';
-import {Comment} from './comment/comment.service';
-import {ENV} from 'src/common/enums/enums';
+import {db, authFB} from '../firebase';
+import {Notification} from './notification/notification.service';
+import {Collection} from './collection/collection.service';
+import {Auth} from './auth/auth.service';
 
-const comment = new Comment({
-  http: new Http(),
-  apiPrefix: ENV.API_PATH,
+const notification = new Notification();
+
+const auth = new Auth({authFB});
+
+const product = new Collection({
+  db,
+  collectionName: 'product',
 });
 
-export {comment};
+export {notification, auth, product};

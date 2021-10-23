@@ -1,2 +1,2 @@
-export * as commentActionCreator from './comment/actions';
+export * as authAction from './auth/actions';
 

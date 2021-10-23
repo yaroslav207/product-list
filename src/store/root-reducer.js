@@ -1,2 +1,3 @@
-export {reducer as commentsReducer} from './comment/reducer';
+export {reducer as authReducer} from './auth/reducer';
+export {reducer as toastrReducer} from 'react-redux-toastr';
 
