@@ -1,7 +1,5 @@
 export {getAllowedClasses} from './dom/dom';
 export {getResolver} from './form/form';
-export {getStringifiedQuery} from './http/http';
-export {formatToCamelCase} from './data/data';
-export {getFormatDate} from './date/date';
-
+export {getFileExtensions, getFileFromFileList, getDataUrl} from './file/file';
+export {changeNameImage} from './image/image';
 
