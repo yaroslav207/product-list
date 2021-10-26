@@ -9,8 +9,8 @@
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, minmax(auto, 80px));
-    grid-gap: 10px;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 30px;
 
     border: 1px solid #9f9f9f;
     border-radius: 10px;

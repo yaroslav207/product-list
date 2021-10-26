@@ -1,0 +1,14 @@
+.productForm {
+  .form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+
+    .input {
+      width: 100%;
+    }
+  }
+}

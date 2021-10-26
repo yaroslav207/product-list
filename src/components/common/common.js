@@ -6,3 +6,4 @@ export {default as AuthPrivateRoute} from './auth-private-router/auth-private-ro
 export {default as AuthWrapper} from './auth-wrapper/auth-wrapper';
 export {default as PrivateRoute} from './private-route/private-route';
 export {default as Header} from './header/header';
+export {default as ImagePreviewControl} from './image-preview-control/image-preview-control';

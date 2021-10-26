@@ -1,15 +1,12 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import {authAction} from 'src/store/actions';
 import styles from './styles.module.scss';
+import {AppRoute} from 'src/common/enums/enums';
 import {Button} from 'src/components/common/common';
 
 const Header = () => {
-  const {user} = useSelector(({auth}) => ({
-    user: auth.user,
-  }));
-
-  const hasUser = Boolean(user);
   const dispatch = useDispatch();
 
   const handleUserExit = () => {
@@ -20,9 +17,24 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerWrapper}>
         <h1>Product list</h1>
-        {hasUser && <nav>
+        <div className={styles.rightWrapper}>
+          <nav>
+            <ul className={styles.navigation}>
+              <li className={styles.navigationItem}>
+                <NavLink to={AppRoute.ROOT} className={styles.link}>
+                  Home
+                </NavLink>
+              </li>
+              <li className={styles.navigationItem}>
+                <NavLink to={AppRoute.PRODUCT_CREATE} className={styles.link}>
+                  Create product
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
           <Button label="LogOut" onClick={handleUserExit} />
-        </nav>}
+        </div>
+
       </div>
     </header>
   );

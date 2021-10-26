@@ -11,6 +11,7 @@ function Input({
   errors,
   register,
   className,
+  ...rest
 }) {
   const isTextArea = type === InputTypes.TEXTAREA;
 
@@ -35,6 +36,7 @@ function Input({
           className={styles.input}
           name={name}
           type={type}
+          {...rest}
         />
       }
       {errors[name] && <span className={styles.errorMessage}>
@@ -58,8 +60,6 @@ Input.defaultProps = {
   errors: {},
   register: {},
   className: null,
-
-
 };
 
 export default Input;

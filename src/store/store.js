@@ -1,7 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {authReducer, toastrReducer} from './root-reducer';
-
 import {handleError as handleErrorMiddleware} from 'src/middlewares/middlewares';
+import {
+  authReducer,
+  toastrReducer,
+  productListReducer,
+  configurateProductReducer,
+} from './root-reducer';
 
 const store = configureStore({
   middleware: (getDefaultMiddleware) => {
@@ -12,6 +16,8 @@ const store = configureStore({
   reducer: {
     auth: authReducer,
     toastr: toastrReducer,
+    productList: productListReducer,
+    configurateProduct: configurateProductReducer,
   },
 });
 

@@ -1,0 +1,85 @@
+.productCard {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+
+  .imageWrapper{
+    width: 100%;
+    padding-top: 100%;
+    background-color: var(--color-primary-light);
+    position: relative;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .name {
+      font-size: 24px;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+
+    .price {
+      font-size: 18px;
+    }
+
+    .discountWrapper {
+      display: flex;
+      justify-content: space-between;
+      height: 25px;
+      margin: 10px 0;
+
+      .discountValue {
+        background-color: red;
+        color: #fde4e4;
+        height: 100%;
+        padding: 0 5px;
+      }
+    }
+  }
+  &:hover {
+    .configurateWrapper {
+      opacity: 1;
+    }
+  }
+
+  .configurateWrapper {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    transition: all 0.2s;
+
+    .buttonEdit, .buttonDelete {
+      flex: 0 0 50%;
+      border-radius: 0;
+      color: #ffffff;
+      transition: none;
+    }
+
+    .buttonEdit:hover, .buttonDelete:hover {
+      filter: brightness(1.2);
+    }
+
+    .buttonEdit {
+      background-color: var(--color-header-background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+  }
+}

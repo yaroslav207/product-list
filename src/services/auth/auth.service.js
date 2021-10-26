@@ -5,7 +5,6 @@ class Auth {
   }
 
   login(authPayload) {
-    console.log(authPayload);
     const {email, password} = authPayload;
     return this.authFB.signInWithEmailAndPassword(this.auth, email, password);
   }
